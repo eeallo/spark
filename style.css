@@ -28,7 +28,14 @@ body {
     min-height: 100vh;
 }
 
-header { background: #ffefee; }											
+header { 
+	background: #ffefee;
+	
+	-webkit-box-flex: 1 0 auto;																	
+    -webkit-flex: 1 0 auto;																		
+    -ms-flex: 1 0 auto;																			
+    flex: 1 0 auto;	
+}											
 main {
 	margin-bottom: 1.5em;
 	
