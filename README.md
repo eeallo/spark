@@ -5,7 +5,7 @@ Pure HTML5 starter theme. No fat.
 
 #### Changelog
 
-** 0.0.1 **
+__ 0.0.1 __
 - Simple grid framwork
 - Icon fonts
 - Decent browser support
