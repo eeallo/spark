@@ -1,5 +1,6 @@
 <?php
 
+// Register sidebars
 function spark_register_sidebars() {
 	register_sidebar( array(
 		'name'         	=> __( 'Primary Sidebar', 'spark' ),
@@ -23,33 +24,48 @@ function spark_register_sidebars() {
 add_action( 'widgets_init', 'spark_register_sidebars');
 
 
+// Register styles and scripts
 function spark_register_styles()  
 {  
     wp_enqueue_style( 'normalize', '//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css' );
     wp_enqueue_style( 'grid', get_template_directory_uri() . '/css/grid.css' );
-	wp_enqueue_style( 'spark-style', get_stylesheet_uri() ); 								// Load our main stylesheet.
-    wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/src/font-awesome-4.1.0/css/font-awesome.min.css' );
+	// Load our main stylesheet.
+	wp_enqueue_style( 'spark-style', get_stylesheet_uri() ); 								
 	
+    wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome-4.1.0/css/font-awesome.min.css' );
+    
+    wp_enqueue_style( 'responsive-nav', get_template_directory_uri() . '/assets/responsive-nav/responsive-nav.css' );
+	wp_enqueue_script( 'responsive-nav', get_template_directory_uri() . '/assets/responsive-nav/responsive-nav.min.js' );
 }  
 add_action( 'wp_enqueue_scripts', 'spark_register_styles' );  
 
 
+// Register menus
 function spark_register_menus() {
 	register_nav_menu( 'primary', __( 'Primary Menu' ) );
 }
 add_action( 'init', 'spark_register_menus' );
 
 
-add_theme_support( 'custom-background' );
+// Enable theme features
+add_theme_support( 'custom-background' );												
 
-//Enable post and comments RSS feed links to head
+$args = array(
+	'search-form',
+	'comment-form',
+	'comment-list',
+	'gallery',
+	'caption'
+);
+add_theme_support( 'html5', $args );
+
+
+// Enable post and comments RSS feed links to head
 add_theme_support( 'automatic-feed-links' );
 
 
+// Create a more specific title element text for output in head of document, based on current view.
 /**
- * Create a nicely formatted and more specific title element text for output
- * in head of document, based on current view.
- *
  * @param string $title Default title text for current view.
  * @param string $sep Optional separator.
  * @return string The filtered title.

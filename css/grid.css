@@ -27,6 +27,11 @@
 	padding: 0 1.5em;
 }
 
+.container-no-padding {
+	max-width: 70em;
+	margin: 0 auto;
+}
+
 .grid {
 	margin-left: -3%;
 	max-width: 105%;

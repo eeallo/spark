@@ -4,7 +4,7 @@ Theme URI: http://modula.fi
 Description: Pure HTML5 starter theme. No fat.
 Author: Eero Louhenperä
 Author URI: http://modula.fi
-Version: 0.0.1
+Version: 0.0.2 (17.10.2014)
 */
 
 /* =Structure
@@ -12,7 +12,6 @@ Version: 0.0.1
 
 html { font-size: 1em; height: 100%; }
 body {
-
     display: -webkit-box;	            /* Old Flexbox for Webkit */
     display: -webkit-flex;              /* Prefixed "new flexbox" */
     display: -ms-flexbox;				/* Tweener flexbox for IE10 */
@@ -27,17 +26,24 @@ body {
     height: 100%;
     min-height: 100vh;
 }
+body.custom-background {
+    background-size: cover;
+    height: auto
+}
 
 header { 
-	background: #ffefee;
-	
+	max-height: 10vh;
 	-webkit-box-flex: 1 0 auto;																	
     -webkit-flex: 1 0 auto;																		
     -ms-flex: 1 0 auto;																			
     flex: 1 0 auto;	
-}											
+}
+.home header { max-height: initial; height: 90vh; }
+
+											
 main {
 	margin-bottom: 1.5em;
+	background: #fff;
 	
     -webkit-box-flex: 1 0 auto;																	
     -webkit-flex: 1 0 auto;																		
@@ -88,6 +94,8 @@ small, .wp-caption-text, .entry-meta { font-size: 0.707em; }
 /* =Content 
 -------------------------------------------------------------- */
 
+#site-description { text-align: center; line-height: 80vh; }		/* Home only */
+
 article { margin: 1.5em 0; }																
 
 /* Additional elements inside content (images) */	
@@ -117,65 +125,10 @@ ol ol { list-style-type: lower-alpha; }
 .entry-meta { padding-top: 1.5rem; clear: both; }
 
 
-/* =Plugins
+/* =Primary navigation
 -------------------------------------------------------------- */
 
-
-
-/* =Sample menu 
--------------------------------------------------------------- */
-
-#access {
-	background: #eee;
-	display: block;
-	float: left;
-	margin: 0 auto 1em;
-	width: 100%;
-}
-#access ul {
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-#access li {
-	float: left;
-	position: relative;
-}
 #access a {
 	display: block;
-	line-height: 2em;
-	padding: 0 1em;
-	text-decoration: none;
-}
-#access ul ul {
-	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	display: none;
-	float: left;
-	position: absolute;
-	top: 2em;
-	left: 0;
-	z-index: 99999;
-}
-#access ul ul ul {
-	left: 100%;
-	top: 0;
-}
-#access ul ul a {
-	background: #dedede;
-	line-height: 1em;
-	padding: .5em .5em .5em 1em;
-	width: 10em;
-	height: auto;
-}
-#access li:hover > a,
-#access ul ul :hover > a {
-	background: #dedede;
-}
-#access ul ul a:hover {
-	background: #cecece;
-}
-#access ul li:hover > ul {
-	display: block;
+	padding: .3em .7em;
 }
