@@ -5,8 +5,11 @@ Pure HTML5 starter theme. No fat.
 
 #### Changelog
 
+##### 0.0.3
+- Layout bugfixes
+
 ##### 0.0.2
-- Helper assets moved from /src to /assets
+- Moved helpers from /src to /assets
 - Default navigation is now responsive
 - New layout for the home page
 
