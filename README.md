@@ -14,8 +14,8 @@ Pure HTML5 starter theme. No fat.
 - New layout for the home page
 
 ##### 0.0.1
-- Simple CSS grid framework
-- Adaptive sticky footer
+- Simple CSS grid
+- Flexbox layout with adaptive sticky footer
 - Icon fonts
 - Decent browser support
 
