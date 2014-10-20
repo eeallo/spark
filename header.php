@@ -24,8 +24,10 @@
 		<div class="container">
 			<div id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
 			
-			<?php if ( is_home() ) { ?>
-			<h1 id="site-description"><?php bloginfo( 'description' ); ?></h1>
+			<?php if ( is_home() && !is_paged() ) { ?>
+			<div id="site-description">
+				<h1><?php bloginfo( 'description' ); ?></h1>
+			</div>	
 			<?php } ?> 
 		</div>
 	</header>
