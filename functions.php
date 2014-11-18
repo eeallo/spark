@@ -32,8 +32,10 @@ function spark_register_styles()
 	wp_enqueue_style( 'spark-style', get_stylesheet_uri() );		// Load our main stylesheet. 								
     wp_enqueue_style( 'font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css' );
     
+    /* Sample resposive navigation
     wp_enqueue_style( 'responsive-nav', get_template_directory_uri() . '/assets/responsive-nav/responsive-nav.css' );
 	wp_enqueue_script( 'responsive-nav', get_template_directory_uri() . '/assets/responsive-nav/responsive-nav.min.js' );
+	*/
 }  
 add_action( 'wp_enqueue_scripts', 'spark_register_styles' );  
 
