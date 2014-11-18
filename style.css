@@ -33,14 +33,14 @@ body.custom-background {
 }
 
 header  { 
-	 max-height: 10vmax;					
+	 max-height: 14.6vmax;					
 	-webkit-box-flex: 1 0 auto;																	
     -webkit-flex: 1 0 auto;																		
     -ms-flex: 1 0 auto;																			
     flex: 1 0 auto;	
 }
 .home header { max-height: initial; height: 90vmin; }
-.paged header { max-height: 10vmax; height: auto; }				/* reset for paged views */
+.paged header { max-height: 14.6vmax; height: auto; }				/* reset for paged views */
 											
 main {
 	margin-bottom: 1.5em;
