@@ -26,7 +26,7 @@
 			
 			<?php if ( is_home() && !is_paged() ) { ?>
 			<div id="site-description">
-				<h1><i class="fa fa-birthday-cake"></i>&nbsp;<?php bloginfo( 'description' ); ?></h1>
+				<h1><?php bloginfo( 'description' ); ?></h1>
 			</div>	
 			<?php } ?> 
 		</div>
