@@ -33,7 +33,7 @@ body.custom-background {
 }
 
 header  { 
-	 max-height: 14.6vmax;					
+	height: 14.6vmax;					
 	-webkit-box-flex: 1 0 auto;																	
     -webkit-flex: 1 0 auto;																		
     -ms-flex: 1 0 auto;																			
