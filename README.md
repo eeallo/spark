@@ -5,6 +5,9 @@ Pure HTML5 starter theme. No fat.
 
 Warning: Spark is under development, breaking changes could occur.
 
+#### To-do
+- Clean up templates
+- SCSS
 
 #### Changelog
 
