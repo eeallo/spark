@@ -7,7 +7,8 @@ Warning: Spark is under development, breaking changes could occur.
 
 #### To-do
 - Clean up templates
-- SCSS
+- Finalize the grid
+- Modularize styles with SCSS
 
 #### Changelog
 
