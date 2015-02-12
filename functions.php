@@ -27,7 +27,7 @@ function spark_register_sidebars() {
 		'name'      	=> __( 'Footer Sidebar', 'spark' ),
 		'id'         	=> 'sidebar-footer',
 		'description'   => __( 'Is at the footer of the theme', 'spark' ),
-		'before_widget' => '<article id="%1$s" class="widget %2$s grid__col grid__col--1-of-4">',
+		'before_widget' => '<article id="%1$s" class="widget %2$s grid__col grid__col--1-of-4 grid__col--m-2-of-2 grid__col--s-1-of-2">',
 		'after_widget'  => '</article>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>'
