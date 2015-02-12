@@ -3,7 +3,7 @@
 	<main role="main">
 		<div class="container">
 			<div class="grid">
-				<div class="unit two-of-three">
+				<div class="grid__col grid__col--2-of-3">
 	
 					<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 						<?php /* If this is a category archive */ if (is_category()) { ?>
@@ -46,7 +46,7 @@
 					<?php endif; ?>
 						
 				</div>
-				<div class="unit one-of-three">
+				<div class="grid__col grid__col--1-of-3">
 					<?php get_sidebar(); ?>	
 				</div> 
 			</div> <!-- end .grid -->

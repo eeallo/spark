@@ -11,13 +11,13 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>
 	<!--[if lt IE 9]>
-    	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
 
 <body <?php body_class(); ?>>
 	<header role="banner">
-		<div class="container-no-padding">
+		<div class="container">
 			<nav id="access" role="navigation" class="nav-collapse">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- #access -->
@@ -25,11 +25,5 @@
 		
 		<div class="container">
 			<div id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-			
-			<?php if ( is_home() && !is_paged() ) { ?>
-			<div id="site-description">
-				<h1><?php bloginfo( 'description' ); ?></h1>
-			</div>	
-			<?php } ?> 
 		</div>
 	</header>

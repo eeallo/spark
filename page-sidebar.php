@@ -9,7 +9,7 @@ Template Name: Page + sidebar
 	<main role="main">
 		<div class="container">
 			<div class="grid">
-				<div class="unit two-of-three">
+				<div class="grid__col grid__col--2-of-3">
 					<?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
 		
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -34,7 +34,7 @@ Template Name: Page + sidebar
 					<?php endif; ?>					
 				</div>
 
-				<div class="unit one-of-three">
+				<div class="grid__col grid__col--1-of-3">
 					<?php get_sidebar(); ?>	
 				</div> 
 

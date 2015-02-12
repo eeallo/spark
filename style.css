@@ -4,60 +4,46 @@ Theme URI: http://modula.fi
 Description: Pure HTML5 starter theme. No fat.
 Author: Eero Louhenperä
 Author URI: http://modula.fi
-Version: 0.0.3 (20.10.2014)
+Version: 0.0.4
 */
 
 /* =Structure
 -------------------------------------------------------------- */
 
-html { font-size: 1em; height: 100%; }
+.container {
+	max-width: 90em;
+	margin: 0 auto;
+	padding: 0 1.5em;
+}
+
 body {
-    display: -webkit-box;	            /* Old Flexbox for Webkit */
-    display: -webkit-flex;              /* Prefixed "new flexbox" */
-    display: -ms-flexbox;				/* Tweener flexbox for IE10 */
-    display: flex;						/* unprefixed standard "new flexbox" version for the rest */
-    
-    -webkit-box-orient: vertical;		
-    -webkit-flex-direction: column;		
-    -ms-flex-direction: column;			
-    flex-direction: column;				
-    
-    height: auto;
-    height: 100%;
-    min-height: 100vh;
-    
+	display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-direction: column;	
+	flex-direction: column;
+  	
+  	height: 100vh;
    	background: #efefef;
 }
 body.custom-background {
     background-size: cover;
 }
 
-header  { 
-	-webkit-box-flex: 1 0 auto;																	
-    -webkit-flex: 1 0 auto;																		
-    -ms-flex: 1 0 auto;																			
-    flex: 1 0 auto;	  
+header, footer { 
+	-webkit-flex-shrink: 0;	
+	flex-shrink: 0;
+	
+	background: #ffefee;  
 }
-.home header { max-height: initial; height: 90vmin; }
-.paged header { height: auto; }		/* reset for paged views */
 											
 main {
-	margin-bottom: 1.5em;
-	background: #fff;
+	-webkit-flex: 1 0 auto;	
+	flex: 1 0 auto;
 	
-    -webkit-box-flex: 1 0 auto;																	
-    -webkit-flex: 1 0 auto;																		
-    -ms-flex: 1 0 auto;																			
-    flex: 1 0 auto;																				
+	margin: 2em 0;
+	background: #fff;
 }								
-footer {
-	background: #ffefee; 
- 
-	-webkit-box-flex: 1 0 auto;																	
-    -webkit-flex: 1 0 auto;																		
-    -ms-flex: 1 0 auto;																			
-    flex: 1 0 auto;	
-}
 footer .site-info { text-align: center; }
 
 aside { background: #efefaa; }
@@ -67,6 +53,7 @@ aside { background: #efefaa; }
 -------------------------------------------------------------- */							
 
 body { 
+	font-size: 1em;
 	font-weight: 400;
 	line-height: 1.45;
 	color: #333;
@@ -96,29 +83,6 @@ h6 {
 }
 
 small, .wp-caption-text, .entry-meta { font-size: 0.707em; }
-
-
-/* =Primary navigation
--------------------------------------------------------------- */
-
-#access a {					/* http://responsive-nav.com */
-	display: block;
-	padding: .3em .7em;
-}
-
-
-/* =Home 
--------------------------------------------------------------- */
-
-#site-description { height: 100vmin;  }				
-#site-description h1 { 
-	height: 50%;
-  	overflow: auto;
-  	margin: auto;
-  	position: absolute;
-  	top: 0; left: 0; bottom: 0; right: 0;	
-  	text-align: center;
-}
 
 
 /* =Content 

@@ -1,5 +1,17 @@
 <?php
 
+// Register styles and scripts
+function spark_register_styles()  
+{  
+    wp_enqueue_style( 'normalize', '//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css' );
+//    wp_enqueue_style( 'grid', get_template_directory_uri() . '/css/grid.css' );
+	wp_enqueue_style( 'toast-grid', get_template_directory_uri() . '/css/toast-grid.css' );
+	wp_enqueue_style( 'spark-style', get_stylesheet_uri() );		// Load our main stylesheet. 								
+    wp_enqueue_style( 'font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css' );
+}  
+add_action( 'wp_enqueue_scripts', 'spark_register_styles' );  
+
+
 // Register sidebars
 function spark_register_sidebars() {
 	register_sidebar( array(
@@ -15,29 +27,13 @@ function spark_register_sidebars() {
 		'name'      	=> __( 'Footer Sidebar', 'spark' ),
 		'id'         	=> 'sidebar-footer',
 		'description'   => __( 'Is at the footer of the theme', 'spark' ),
-		'before_widget' => '<article id="%1$s" class="widget %2$s unit one-of-four">',
+		'before_widget' => '<article id="%1$s" class="widget %2$s grid__col grid__col--1-of-4">',
 		'after_widget'  => '</article>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>'
 	) );	
  }
 add_action( 'widgets_init', 'spark_register_sidebars');
-
-
-// Register styles and scripts
-function spark_register_styles()  
-{  
-    wp_enqueue_style( 'normalize', '//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css' );
-    wp_enqueue_style( 'grid', get_template_directory_uri() . '/css/grid.css' );
-	wp_enqueue_style( 'spark-style', get_stylesheet_uri() );		// Load our main stylesheet. 								
-    wp_enqueue_style( 'font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css' );
-    
-    /* Sample resposive navigation
-    wp_enqueue_style( 'responsive-nav', get_template_directory_uri() . '/assets/responsive-nav/responsive-nav.css' );
-	wp_enqueue_script( 'responsive-nav', get_template_directory_uri() . '/assets/responsive-nav/responsive-nav.min.js' );
-	*/
-}  
-add_action( 'wp_enqueue_scripts', 'spark_register_styles' );  
 
 
 // Register menus
