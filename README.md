@@ -15,6 +15,7 @@ Warning: Spark is under development, breaking changes could occur.
 - Complete grid framework (https://github.com/daneden/toast)
 - Font Awesome 4.3.0 (cdnjs.com)
 - Normalize 3.0.2 (cdnjs.com)
+- Removed the navigation example
 
 ##### 0.0.3
 - Font Awesome 4.2.0 (cdnjs.com)
