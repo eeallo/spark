@@ -7,6 +7,7 @@ Warning: Spark is under development, breaking changes could occur.
 
 #### To-do
 - Modularize styles with SCSS
+- Possibly include sanitize.css (http://jonathantneal.github.io/sanitize.css/)
 
 #### Changelog
 
